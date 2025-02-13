@@ -19,7 +19,7 @@ public class UserController  {
     }
 
     @PostMapping("/login")
-    public Users login(@RequestBody Users user) {
-        return service.register(user);
+    public String login(@RequestBody Users user) {
+        return service.verify(user);
     }
 }
